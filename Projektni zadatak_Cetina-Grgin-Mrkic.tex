@@ -1,0 +1,81 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[croatian]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage {tikz}
+\usepackage{pgfplots}
+\usetikzlibrary {positioning}
+\usepackage{tocloft}
+\usepackage[hidelinks]{hyperref}
+\usepackage[section]{placeins}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\usepackage[blocks]{authblk}% The option is for block layout
+
+\newcommand{\kolegij}{}
+\newcommand{\naslovRada}{Proračun i konstrukcija 1-stupnjskog reduktora s cilindričnim ravnim zubima \\ {\large Timski projektni zadatak}} 
+\newcommand{\mailFriendlynaslovRada}{Konstrukcije - projektni zadatak}
+
+%\author{
+%Kristijan Cetina \\{\small JMBAG: 2424011721} \\ {\href{mailto:kcetina@politehnika-pula.hr?subject=\mailFriendlynaslovRada}{{\footnotesize kcetina@politehnika-pula.hr}}} \and 
+%Stjepan Grgin \\{\small JMBAG: 0112005802} \\ {\href{mailto:sgrgin@politehnika-pula.hr?subject=\mailFriendlynaslovRada}{{\footnotesize sgrgin@politehnika-pula.hr}}} \and 
+%Igor Mrkić \\{\small JMBAG: 0114017089} \\ {\href{mailto:imrkic@politehnika-pula.hr?subject=\mailFriendlynaslovRada}{{\footnotesize imrkic@politehnika-pula.hr}}}
+%}
+
+%\author{
+%Kristijan Cetina \altaffiliation{\href{mailto:kcetina@politehnika-pula.hr?subject=%\mailFriendlynaslovRada}{kcetina@politehnika-pula.hr}, JMBAG: 2424011721} \and 
+%Stjepan Grgin \footnote{\href{mailto:sgrgin@politehnika-pula.hr?subject=\mailFriendlynaslovRada}%{sgrgin@politehnika-pula.hr}, JMBAG: 0112005802}  \and 
+%Igor Mrkić \footnote{\href{mailto:imrkic@politehnika-pula.hr?subject=\mailFriendlynaslovRada}%{imrkic@politehnika-pula.hr}, JMBAG: 0114017089}
+%}
+
+\author[1]{Kristijan Cetina}
+\author[2]{Stjepan Grgin}
+\author[3]{Igor Mrkić}
+
+\affil[1]{\href{mailto:kcetina@politehnika-pula.hr?subject=\mailFriendlynaslovRada}{kcetina@politehnika-pula.hr} JMBAG: 2424011721}
+\affil[2]{\href{mailto:sgrgin@politehnika-pula.hr?subject=\mailFriendlynaslovRada}{sgrgin@politehnika-pula.hr} JMBAG: 0112005802}
+\affil[3]{\href{mailto:imrkic@politehnika-pula.hr?subject=\mailFriendlynaslovRada}{imrkic@politehnika-pula.hr} JMBAG: 0114017089}
+
+
+
+%\title{\kolegij \\ \naslovRada}
+\title{\naslovRada}
+\date{Pula, \today}
+
+\begin{document}
+\pgfplotsset{width=\textwidth,compat=newest}
+
+\begin{titlepage}
+\clearpage
+\begin{center}
+\begin{Huge}
+POLITEHNIKA PULA\\
+\end{Huge}
+\begin{LARGE}
+Visoka tehničko-poslovna škola s p.j.\\
+Stručni studij politehnike\\
+\end{LARGE}
+\end{center}
+\vspace{3cm}
+{\let\newpage\relax\maketitle}
+\thispagestyle{empty}
+\vfill
+\begin{abstract}
+U ovom radu predstavljamo proračun strojnog sklopa - 1-stupanjskog reduktora zajedno s pripradajućim vratilima i ležajevima koji je zadan kao sastavni dio kolegija Konstrukcije
+\end{abstract}
+\end{titlepage}
+
+\tableofcontents
+\listoftables	%ako ih ima puno prebaci na kraj dokumenta
+\listoffigures	%ako ih ima puno prebaci na kraj dokumenta
+
+%Ovdje kreće rad ili može se koristiti
+%\input{filename} (da nastavi pisati kako da je copy/paste) ili
+%\include{filename} (da ubaci na novu stranicu. Ok za nova poglavlja i sl)
+
+\section{Uvod}
+Ovaj projektni zadatak nastoj je kao obavezni zadatak u sklopu kolegija Konstrukcije koji se održava pod vodstvom Milenka Jokića, dipl.ing., predavača na stručnom studiju politehnike na Politehnici Pula te asistenciju Feđe Balića, mag. ing. mech.
+\end{document}
