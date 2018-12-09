@@ -274,8 +274,193 @@ Promjer na poziciji ležaja $d_L=d+5mm= \mathbf{65 \,mm}$.
 Prema katalogu proizvođača ležajeva\cite{skf} odabran je ležaj \textbf{SKF 31913} s potrebnom dimenzijom oslonca ležaja $73 \, mm \leq d_a \leq 86 \, mm$ te je odabran $\mathbf{d_a=84mm}$.
 
 \subsection{Kontrolni proračun vratila}
+Na slici \ref{fig:kriticniPresjeci} prikazani su predviđeni kritični presjeci na vratilima reduktora za koje je izvršena provjera na plastičnu deformaciju prema normi DIN 743.
+\begin{figure}[!h]
+\includegraphics[width=1\textwidth]{KriticniPresjeci.jpg}
+\caption{Kritični presjeci na vratilima reduktora}\label{fig:kriticniPresjeci}
+\end{figure}
+
+Na pogonskom vratilu provjera je izvšena u presjeku 1-1 (na spoju reduktora s pogonskim strojem) gdje je vratilo najtanje.
+Na gonjenom vratilu reduktora provjera je izvršena na označenim presjecima 2-2 i 3-3.
+
+Kontrolom na plastičnu deformaciju računa se koliko je puta granica tečenja $R_e$ ili $R_{p0,2}$ veća od najvećeg naprezanja.
+Naprezanja se javljaju kao posljedica opterećenja $M_{s \, max}$, $F_{a \, max}$ i $T_{max}$.
+Kao maksimana opterećenja uzeta su 3 puta veća on normalnih opterećenja koja se mogu javiti kod pokretanja ili zaustavljana stoja ili raznih udarnih opterećenja.
+Faktor sigurnosti koji treba biti veći ili jedna 1.2 izračunat je pomoću sljedećeg izraza
+\begin{equation}
+S_p=\frac{1}{\sqrt{\left( \frac{\sigma_{s \, max}}{R_{es}}+\frac{\sigma_{v,tl \, max}}{R_e}\right)^2+ \left( \frac{\tau_{t \, max}}{R_{et}}\right)^2}}\geq 1,2 \label{equ_faktorSigurnostiPlasticeDeformacije}
+\end{equation}
+Stvarne granice tečenja su određene uzimajući u obzir tehnološki faktor $K_t$ zbog smanjenja granice tečenja s povećanjem promjera vratila zbog nehomogenosti materijala. Za korišteni materijal E360 (Č0745) korišten je izraz
+\begin{equation}
+K_t=1-0,26\cdot \log \left( \frac{D}{32} \right) \label{equ:faktorKt}
+\end{equation}
+Granice tečenja:
+\begin{align}
+R_e &= K_t \cdot R_{eN} \label{equ:Re} \\
+R_{es} &= K_t \cdot R_{esN} \label{equ:Res} \\
+R_{et} &= K_t \cdot R_{etN} \label{equ:Ret}
+\end{align}
+Pri čemu su $R_{eN}$, $R_{esN}$ i $R_{etN}$ su očitani iz tablice \cite{potrebniMaterijali}.
+
+\subsubsection{presjek 1-1}
+Uvrštavanjem podataka u \eqref{equ:faktorKt} dobiven je tehnološki faktor $K_t$
+\begin{align*}
+K_t&=1-0,26\cdot \log \left( \frac{D}{32} \right)\\
+K_t&=1-0,26\cdot \log \left( \frac{105}{32} \right)\\
+K_t&=\mathbf{0,8658}
+\end{align*}
+U presjeku 1-1 ne javljaju se vlačne niti tlačna opterećenja kao niti poterečenja koje uzrokuju savijenje ili su isti zanemarivo mali već postoji samo moment uvijanja koji uzrokuje torzijsko naprezanje.
+Uvršavanjem poznatih podataka u \eqref{equ:Ret} dobivena je stvarna granica plastičnosti materijala pri torziji.
+\begin{align*}
+R_{et}&=0,8658 \cdot 250\\
+R_{et}&=\mathbf{216 \dfrac{N}{mm^2}}
+\end{align*}
+Maksimalno torzijsko naprezanje koje se javlja u presjeku 1-1:
+\begin{align*}
+\tau_{t \, max}&=\frac{T_{max}}{W_p}=\frac{3 \cdot T_n \cdot 16}{(d-t_1)^3 \pi}\\
+\tau_{t \, max}&=\frac{3 \cdot 121,5\cdot 10^3 \cdot 16}{(35)^3 \pi}\\
+\tau_{t \, max}&=\mathbf{43,3 \dfrac{N}{mm^2}}
+\end{align*}
+Uvršavanjem poznatih podataka u \eqref{equ_faktorSigurnostiPlasticeDeformacije} dobiven je stvarni foktor sigurnosti
+\begin{align*}
+S_p&=\frac{1}{\sqrt{\left(\frac{43,3}{216}\right)^2}}\\
+S_p&=\mathbf{4,99 > 1,2}
+\end{align*}
+Faktor sigurnosti u presjeku 1-1 zadovoljava postavljeni uvijet.
+
+\subsubsection{presjek 2-2}
+Uvrštavanjem podataka u \eqref{equ:faktorKt} dobiven je tehnološki faktor $K_t$
+\begin{align*}
+K_t&=1-0,26\cdot \log \left( \frac{D}{32} \right)\\
+K_t&=1-0,26\cdot \log \left( \frac{80}{32} \right)\\
+K_t&=\mathbf{0,8965}
+\end{align*}
+U presjeku 2-2 ne javljaju se vlačne niti tlačna opterećenja ili su isti zanemarivo mali već postoje samo moment uvijanja koji uzrokuje torzijsko naprezanje i sila na zupčanicima koja uzrokuje savijanje vratila izmeđe oslonaca (ležajeva).
+Uvršavanjem poznatih podataka u \eqref{equ:Ret} dobivena je stvarna granica plastičnosti materijala pri torziji.
+\begin{align*}
+R_{et}&=0,8965 \cdot 250\\
+R_{et}&=\mathbf{224 \dfrac{N}{mm^2}}
+\end{align*}
+Uvršavanjem poznatih podataka u \eqref{equ:Res} dobivena je stvarna granica plastičnosti materijala pri savijanju.
+\begin{align*}
+R_{es}&=0,8965 \cdot 430\\
+R_{es}&=\mathbf{385,5 \dfrac{N}{mm^2}}
+\end{align*}
+
+Maksimalno torzijsko naprezanje koje se javlja u presjeku 2-2:
+\begin{align*}
+\tau_{t \, max}&=\frac{T_{max}}{W_p}=\frac{3 \cdot T_n \cdot 16}{(d-t_1)^3 \pi}\\
+\tau_{t \, max}&=\frac{3 \cdot 462\cdot 10^3 \cdot 16}{(71)^3 \pi}\\
+\tau_{t \, max}&=\mathbf{19,7 \dfrac{N}{mm^2}}
+\end{align*}
+
+Maksimalno naprezanje pri savijanju koje se javlja u presjeku 2-2:
+\begin{align*}
+\sigma_{s \, max}&=\frac{M_{s \, max}}{W}=\frac{3 \cdot M_s \cdot 32}{(d-t_1)^3 \pi}\\
+\sigma_{s \, max}&=\frac{3 \cdot 74358,5  \cdot 16}{(71)^3 \pi}\\
+\sigma_{s \, max}&=\mathbf{6,35 \dfrac{N}{mm^2}}
+\end{align*}
+
+Uvršavanjem poznatih podataka u \eqref{equ_faktorSigurnostiPlasticeDeformacije} dobiven je stvarni foktor sigurnosti
+\begin{align*}
+S_p&=\frac{1}{\sqrt{\left( \frac{6,35}{385,5}\right)^2+ \left(\frac{19,7}{224}\right)^2}}\\
+S_p&=\mathbf{11,1 > 1,2}
+\end{align*}
+Faktor sigurnosti u presjeku 2-2 zadovoljava postavljeni uvijet.
+
+\subsubsection{presjek 3-3}
+Uvrštavanjem podataka u \eqref{equ:faktorKt} dobiven je tehnološki faktor $K_t$
+\begin{align*}
+K_t&=1-0,26\cdot \log \left( \frac{D}{32} \right)\\
+K_t&=1-0,26\cdot \log \left( \frac{80}{32} \right)\\
+K_t&=\mathbf{0,8965}
+\end{align*}
+U presjeku 3-3 ne javljaju se vlačne niti tlačna opterećenja kao niti poterečenja koje uzrokuju savijenje ili su isti zanemarivo mali već postoji samo moment uvijanja koji uzrokuje torzijsko naprezanje.
+Uvršavanjem poznatih podataka u \eqref{equ:Ret} dobivena je stvarna granica plastičnosti materijala pri torziji.
+\begin{align*}
+R_{et}&=0,8965 \cdot 250\\
+R_{et}&=\mathbf{224 \dfrac{N}{mm^2}}
+\end{align*}
+Maksimalno torzijsko naprezanje koje se javlja u presjeku 3-3:
+\begin{align*}
+\tau_{t \, max}&=\frac{T_{max}}{W_p}=\frac{3 \cdot T_n \cdot 16}{(d-t_1)^3 \pi}\\
+\tau_{t \, max}&=\frac{3 \cdot 462\cdot 10^3 \cdot 16}{(53)^3 \pi}\\
+\tau_{t \, max}&=\mathbf{47,4 \dfrac{N}{mm^2}}
+\end{align*}
+Uvršavanjem poznatih podataka u \eqref{equ_faktorSigurnostiPlasticeDeformacije} dobiven je stvarni foktor sigurnosti
+\begin{align*}
+S_p&=\frac{1}{\sqrt{\left(\frac{47,4}{224}\right)^2}}\\
+S_p&=\mathbf{4,7 > 1,2}
+\end{align*}
+Faktor sigurnosti u presjeku 3-3 zadovoljava postavljeni uvijet.
 
 \section{Proračun steznog spoja}
+Dodirna površina između gonjenog vratila i zupčanika koji se navlači na njega je
+\begin{align*}
+A_F&=D_F \cdot l_F \cdot \pi \\
+A_F&=84 \cdot 100 \cdot \pi \\
+A_F&=\mathbf{26389,3 \, mm^2}
+\end{align*}
+Potrebna sila treba između zupčanika i vratila:
+\begin{align*}
+F_F&=\frac{2 \cdot T_2 \cdot \nu}{D_F}\\
+F_F&=\frac{2 \cdot 462 \cdot 1,8}{84\cdot 10^{-3}}\\
+F_F&=\mathbf{19800 \, N}
+\end{align*}
+Potrebna normalna sila usljed faktora trenja očitanog iz \cite{krivzan1998osnove}(tablica 9.11, str. 346.)
+\begin{align*}
+F_N&=\frac{F_F}{\mu}\\
+F_N&=\frac{19800}{0,11}\\
+F_N&=\mathbf{180000 \, N}
+\end{align*}
+Minimalni potrebni tlak steznog spoja:$$ p_{min}=\frac{F_N}{A_F} = \frac{180000}{26389,3}= \mathbf{6,82 \dfrac{N}{mm^2}}$$
+Minimalni potrebni prijeklop je izračunat po izrazu
+\begin{equation}
+P_{st}=p \cdot D_F \cdot (K_V+K_U)\label{equ:Prijeklop}
+\end{equation}
+pri kojem su:
+\begin{equation}
+K_V=\frac{(m_V+1)+(m_V-1) \cdot Q_V^2}{m_V \cdot E_V \cdot (1-Q_V^2)}\label{equ:K_VFaktor}
+\end{equation} i
+\begin{equation}
+K_U=\frac{m_U-1}{m_U \cdot E_U}\label{equ:K_UFaktor}
+\end{equation}
+gdje je $\nu=0,3$ - \textit{Poissonov} broj za čelik, $E=2,1 \cdot 10^5 \dfrac{N}{mm^2}$ - \textit{Youngov} modul elastičnosti za čelik, $m=\dfrac{1}{\nu}$, $Q_V=\dfrac{D_F}{D_V}$, $D_V\approx 2 \cdot D_F$.
+Uvrštavanjem poznatih podataka u \eqref{equ:K_VFaktor} dobiven je faktor 
+$$
+K_V=\frac{(4,33)+(2,33) \cdot 0,5^2}{3,33 \cdot 2,1\cdot 10^5 \cdot (1-0,5^2)} \mathbf{= 9,36 \cdot 10^{-6} \, \dfrac{mm^2}{N}}
+$$
+Uvrštavanjem poznatih podataka u \eqref{equ:K_UFaktor} dobiven je faktor
+$$
+K_U=\frac{m_U-1}{m_U \cdot E_U}=\frac{2,33}{3,33 \cdot 2,1\cdot 10^5}\mathbf{= 3,33 \cdot 10^{-6} \, \dfrac{mm^2}{N}}
+$$
+Uvršavanjem dobivenih faktora u \eqref{equ:Prijeklop} dobije se minimalni potrebni prijeklop
+$$
+P_{st}=6,82 \cdot 84 \cdot (9,36 \cdot 10^{-6} + 3,33 \cdot 10^{-6})= \mathbf{7,27 \, \mu m}
+$$
+Prilikom navlačenja zupčanika na vratilo pri čvrstom dosjedu dolazi do zaglađivanja hrapavosti površine. Zbog toga je potrebno povećati stvarni minimalni prijeklop po izrazu
+\begin{equation}
+P_{min}=P_{st}+3,2 \cdot (R_{a \, os}+R_{a \, gl})\label{equ:stvarniMinimalniPrijeklop}
+\end{equation}
+Pri čemu je $R_a$ - srednje aritmetičko odstupanje profila hrapavosti. Očitan iz \cite{krivzan1998osnove}(tablica 3.44, str 104) za kvalitetu obrade površine N7($R_{a(N7)}=1,6 \, \mu m$).
+Uvršavanjem dobivenih podataka u \eqref{equ:stvarniMinimalniPrijeklop} dobije se stvarni minimalni prijeklop
+$$
+P_{min}=\mathbf{12,93 \, \mu m}
+$$
+
+Maksimalni doputšeni tlak na steznoj površini je određen putem izraza
+\begin{equation}
+p_{max}\leq\frac{R_e \cdot (1-Q_V^2)}{1,2\cdot \sqrt{3+Q_V^4}}\label{equ:maxTlakSteznePovrsine}
+\end{equation}
+te uvršavanjem poznatih podataka u izraz \eqref{equ:maxTlakSteznePovrsine} dobije se
+$$
+p_{max}\leq\frac{322 \cdot (1-0,5^2)}{1,2\cdot \sqrt{3+0,5^4}}=\mathbf{115 \, \dfrac{N}{mm^2}}
+$$
+Stvarni dopušteni maksimalni prijeklop po izrazu \eqref{equ:Prijeklop} iznosi
+$$
+P_{max}=115 \cdot 84 \cdot (9,36 \cdot 10^{-6} + 3,33 \cdot 10^{-6})= \mathbf{122,58 \, \mu m}
+$$
+\textbf{TREBA ODABRATI TOLERANCIJSKA POLJA ZA ČVRSTI DOSJED PREMA DOBIVENIM PODACIMA}
 
 \section{Proračun valjnih ležajeva}
 Trajnost ležajeva se može proračunati po izrazu
@@ -300,6 +485,17 @@ L_{10h2}&=\left(\frac{54700}{1171} \cdot 1 \right)^{\dfrac{10}{3}} \cdot \frac{1
 L_{10h2}&=\mathbf{22247650\, h}
 \end{align*}
 Odabrani ležaj zadovoljava potrebnu minimalnu trajnost iz zahtjeva.
+
+Tehnički podaci odabranog ležaja za pogonsko vratilo se nalazi na slici \ref{fig:lezajPogonskogVratila}.
+\begin{figure}
+\includegraphics[width=1\textwidth]{datasheetsModels/Deep_groove_ball_bearings-6008.pdf}
+\caption{Tehnički podaci ležaja pogonskog vratila SKF 6008}\label{fig:lezajPogonskogVratila}
+\end{figure} 
+Tehnički podaci odabranog ležaja za gonjeno vratilo se nalazi na slici \ref{fig:lezajGonjenogVratila}
+\begin{figure}[h]
+\includegraphics[width=1\textwidth]{datasheetsModels/Tapered_roller_bearings_single_row-32913.pdf}
+\caption{Tehnički podaci ležaja pogonskog vratila SKF 32913}\label{fig:lezajGonjenogVratila}
+\end{figure}
 
 
 \newpage
