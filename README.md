@@ -13,13 +13,18 @@ Prema zadanom predlošku (predložak 3) i zadanim podacima konstriran je 1-stupa
 ## Uvedena su sljedeća pojednostavljena i zanemareni sljedeći dijelovi proračuna:
 
 > kontrolni pročun
+
 > izbor ulja za podmazivanje
+
 > toplinski proračun
+
 > određivanje stupnja korisnosti
 
 Kod proračuna dimenzija zupčanika zanemareni su sljedeći proračuni:
 > nosivost boka zuba
-> sigurnost na \textit{pitting} (površinski zamor)
+
+> sigurnost na _pitting_ (površinski zamor)
+
 > nosivost korjena zuba
 
 Kod proračuna vratila izražena je samo kontrola na plastičnu deformaciju te je zanemarena kontrola na zamor materijala.
