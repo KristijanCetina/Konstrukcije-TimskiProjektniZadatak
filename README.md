@@ -9,7 +9,6 @@ Detaljni tok proračuna je izrađen u [LaTeX](http://lmgtfy.com/?q=LaTeX) te kom
 
 Za sve problema na koje naiđete slobodno ih prijavite na [Issues tabu](https://github.com/KristijanCetina/Konstrukcije-TimskiProjektniZadatak/issues).
 
-Prema zadanom predlošku (predložak 3) i zadanim podacima konstriran je 1-stupanjski reduktor s cilindričnim ravnim zubima.
 ## Uvedena su sljedeća pojednostavljena i zanemareni sljedeći dijelovi proračuna:
 
 > kontrolni pročun
