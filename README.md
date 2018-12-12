@@ -11,7 +11,7 @@ Za sve problema na koje naiđete slobodno ih prijavite na [Issues tabu](https://
 
 ## Uvedena su sljedeća pojednostavljena i zanemareni sljedeći dijelovi proračuna:
 
-* kontrolni pročun
+* kontrolni proračun
 * izbor ulja za podmazivanje
 * toplinski proračun
 * određivanje stupnja korisnosti
