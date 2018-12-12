@@ -11,19 +11,14 @@ Za sve problema na koje naiđete slobodno ih prijavite na [Issues tabu](https://
 
 ## Uvedena su sljedeća pojednostavljena i zanemareni sljedeći dijelovi proračuna:
 
-> kontrolni pročun
-
-> izbor ulja za podmazivanje
-
-> toplinski proračun
-
-> određivanje stupnja korisnosti
+* kontrolni pročun
+* izbor ulja za podmazivanje
+* toplinski proračun
+* određivanje stupnja korisnosti
 
 Kod proračuna dimenzija zupčanika zanemareni su sljedeći proračuni:
-> nosivost boka zuba
-
-> sigurnost na _pitting_ (površinski zamor)
-
-> nosivost korjena zuba
+* nosivost boka zuba
+* sigurnost na _pitting_ (površinski zamor)
+* nosivost korjena zuba
 
 Kod proračuna vratila izražena je samo kontrola na plastičnu deformaciju te je zanemarena kontrola na zamor materijala.
