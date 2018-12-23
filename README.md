@@ -1,9 +1,9 @@
 # Konstrukcije - Timski projektni zadatak
-Timski projektni zadatak iz kolegija Konstrukcije
+U ovom radu predstavljamo proračun strojnog sklopa - 1-stupanjskog reduktora zajedno s pripradajućim vratilima i ležajevima koji je zadan kao timski projektni zadatak iz kolegija Konstrukcije.
 
 Projektni zadatak se sastoji od proračuna zupčanika, vratila i ležajeva sukladno [zadanim parametrima](https://github.com/KristijanCetina/Konstrukcije-TimskiProjektniZadatak/blob/master/TimskiProjektniZadatak.pdf).
 
-3D model vratila je izrađen uz pomoć [Autodesk Inventora](https://www.google.com/search?q=Autodesk+Inventor).   
+3D model reduktora izrađen je uz pomoć [Autodesk Inventora](https://www.google.com/search?q=Autodesk+Inventor).
 
 Detaljni tok proračuna je izrađen u [LaTeX](http://lmgtfy.com/?q=LaTeX) te kompajliran u .pdf dokument.  
 [PDF verzija proračuna s nacrtom](https://github.com/KristijanCetina/Konstrukcije-TimskiProjektniZadatak/blob/master/Projektni%20zadatak_Cetina-Grgin-Mrkic.pdf)
