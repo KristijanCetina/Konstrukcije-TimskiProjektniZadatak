@@ -21,4 +21,4 @@ Kod proračuna dimenzija zupčanika zanemareni su sljedeći proračuni:
 * sigurnost na _pitting_ (površinski zamor)
 * nosivost korjena zuba
 
-Kod proračuna vratila izražena je samo kontrola na plastičnu deformaciju te je zanemarena kontrola na zamor materijala.
+Kod proračuna vratila izrađena je samo kontrola na plastičnu deformaciju te je zanemarena kontrola na zamor materijala.
