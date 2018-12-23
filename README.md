@@ -2,6 +2,7 @@
 Timski projektni zadatak iz kolegija Konstrukcije
 
 Projektni zadatak se sastoji od proračuna zupčanika, vratila i ležajeva sukladno [zadanim parametrima](https://github.com/KristijanCetina/Konstrukcije-TimskiProjektniZadatak/blob/master/TimskiProjektniZadatak.pdf).
+
 3D model vratila je izrađen uz pomoć [Autodesk Inventora](https://www.google.com/search?q=Autodesk+Inventor).   
 
 Detaljni tok proračuna je izrađen u [LaTeX](http://lmgtfy.com/?q=LaTeX) te kompajliran u .pdf dokument.  
