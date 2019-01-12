@@ -93,6 +93,29 @@ Kod proračuna dimenzija zupčanika zanemareni su sljedeći proračuni:
 \end{itemize}
 Kod proračuna vratila izražena je samo kontrola na plastičnu deformaciju te je zanemarena kontrola na zamor materijala.
 
+\section{Mehaničke karakteristike materijala}
+Zadani materijal za izradu reduktora je Č0745 (E360) čije su karakteristike preuzete iz literature \cite{potrebniMaterijali} te su navedeni u tablici \ref{MehanickeKarakteristikeMaterijala}
+\begin{table}
+\begin{tabular}{|l|r|}\hline 
+Karakteristika & Čvrstoća $\dfrac{N}{mm^2}$ \\ \hline 
+
+Vlačna čvrstoća & $R_m=700 $ \\ \hline 
+Granica tečenja & $R_e=370 $ \\ \hline 
+Trajna ishodišna dinamička čvrstoča pri vlaku & $R_{d0}=370 $ \\ \hline 
+Trajna iizmjenična dinamička čvrstoča pri vlaku/tlaku & $R_{d-1}=320 $ \\ \hline 
+Trajna ishodišna dinamička čvrstoča pri savijanju & $R_{ds0}=520 $ \\ \hline 
+Trajna izmjenična dinamička čvrstoča pri savijanju & $R_{ds-1}=340 $ \\ \hline 
+Trajna ishodišna dinamička čvrstoča pri torziji & $R_{dt0}=260 $ \\ \hline 
+Trajna izmjenična dinamička čvrstoča pri torziji & $R_{dt-1}=370 $ \\ \hline 
+Granica tečenja pri vlaku/tlaku & $R_{eN}=360 $ \\ \hline 
+Granica tečenja pri savijanju & $R_{esN}=430 $ \\ \hline 
+Granica tečenja pri torziji & $R_{etN}=250 $ \\ \hline 
+\end{tabular} 
+Vrijednosti označene s indeksom \emph{N} odnose se na nazivni promjer $d_N=16\,mm$.
+
+\caption{Mehaničke karakteristike korištenog materijala Č0745} \label{MehanickeKarakteristikeMaterijala}
+\end{table}
+
 \chapter{Proračun sklopa}
 \section{Proračun dimenzija zupčanika}
 Na temelju poznatih pogonskih podatak određen je minimalni diobeni promjer pogonskog zupčanika po izrazu
@@ -300,7 +323,7 @@ R_e &= K_t \cdot R_{eN} \label{equ:Re} \\
 R_{es} &= K_t \cdot R_{esN} \label{equ:Res} \\
 R_{et} &= K_t \cdot R_{etN} \label{equ:Ret}
 \end{align}
-Pri čemu su $R_{eN}$, $R_{esN}$ i $R_{etN}$ su očitani iz tablice \cite{potrebniMaterijali}.
+Pri čemu su $R_{eN}$, $R_{esN}$ i $R_{etN}$ su očitani iz tablice \ref{MehanickeKarakteristikeMaterijala}.
 
 \subsubsection{presjek 1-1}
 Uvrštavanjem podataka u \eqref{equ:faktorKt} dobiven je tehnološki faktor $K_t$
