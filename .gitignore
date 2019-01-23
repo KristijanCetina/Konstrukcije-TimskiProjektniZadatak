@@ -244,4 +244,5 @@ TSWLatexianTemp*
 #Other users files
 *.lck
 **/OldVersions/**
+**/Images/**
 
