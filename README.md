@@ -1,4 +1,5 @@
 # Konstrukcije - Timski projektni zadatak
+![Sklop reduktora](OutputDrawings/SklopReduktora.jpg?raw=true "Sklop Reduktora")
 U ovom radu predstavljamo proračun strojnog sklopa - 1-stupanjskog reduktora zajedno s pripradajućim vratilima i ležajevima koji je zadan kao timski projektni zadatak iz kolegija Konstrukcije.
 
 Projektni zadatak se sastoji od proračuna zupčanika, vratila i ležajeva sukladno [zadanim parametrima](https://github.com/KristijanCetina/Konstrukcije-TimskiProjektniZadatak/blob/master/TimskiProjektniZadatak.pdf).
